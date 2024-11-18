@@ -1,0 +1,224 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  background: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+  transition: background 1s ease; /* Smooth transition for background change */
+}
+
+/* App container */
+.app-container {
+  width: 100%;
+  max-width: 850px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(45deg, #3f51b5, #2196f3);
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Button to clear completed tasks */
+.clear-completed {
+  background-color: #ff4081;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.clear-completed:hover {
+  background-color: #f50057;
+}
+
+/* Task Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#task-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  width: 100%;
+  transition: border 0.3s;
+}
+
+#task-input:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+/* Task Options (Due Date, Category, Priority) */
+.task-options {
+  display: flex;
+  gap: 15px;
+}
+
+.task-due-date, .task-category, .task-priority {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  max-width: 150px;
+}
+
+.task-due-date:focus, .task-category:focus, .task-priority:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+/* Add Task Button */
+.add-task {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px; /* Rounded, pill-like shape */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: auto;
+  align-self: flex-start; /* Align to the left */
+}
+
+.add-task:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Task List */
+.task-list {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Item */
+.task-item {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+/* Completed task visual */
+.task-item.completed {
+  text-decoration: line-through;
+  background-color: #d4e157;
+}
+
+/* Deadline Alarm (Due Tomorrow, Overdue) */
+.due-date-alert {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #ff9800; /* Default warning color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  display: none;
+}
+
+.due-date-alert.overdue {
+  background-color: #f44336; /* Red for overdue */
+}
+
+.due-date-alert.due-tomorrow {
+  background-color: #ffeb3b; /* Yellow for due tomorrow */
+}
+
+/* Priority Styles */
+.low-priority {
+  border-left: 6px solid #66bb6a;
+}
+
+.medium-priority {
+  border-left: 6px solid #ffb74d;
+}
+
+.high-priority {
+  border-left: 6px solid #ff4d4d;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .task-options {
+      flex-direction: column;
+  }
+
+  .task-due-date, .task-category, .task-priority {
+      width: 100%;
+  }
+
+  .add-task {
+      width: 100%;
+      margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
