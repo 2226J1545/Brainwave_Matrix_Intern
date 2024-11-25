@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Shop</title>
+    <link rel="stylesheet" href="myweb.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">canvas</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#">🔍</a>
+                <a href="#">👤</a>
+                <a href="#">🛒</a>
+            </div>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="C:\Users\GOKUL\Downloads\S_.png" style="width:100%">
+            <div class="text">Caption Text 1</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\GOKUL\Downloads\A_.png" style="width:100%">
+            <div class="text">Caption Text 2</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\GOKUL\Downloads\N_.png" style="width:100%">
+            <div class="text">Caption Text 3</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\GOKUL\Downloads\A_1.png" style="width:100%">
+            <div class="text">Caption Text 4</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\GOKUL\Downloads\C_.png" style="width:100%">
+            <div class="text">Caption Text 5</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\GOKUL\Downloads\V_.png" style="width:100%">
+            <div class="text">Caption Text 6</div>
+        </div>
+    </div>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    </script>
+      <div class="move">
+        <div class="walk">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\1.jpg" alt="Fresh Arrivals">
+            <h3>Fresh Arrivals</h3>
+            <p>Summer is Coming!</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="walk">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\2.jpg" alt="Accessories">
+            <h3>Accessories</h3>
+            <p>Check out more Products for your Lifestyles</p>
+            <a href="#">Know More</a>
+        </div>
+        <div class="walk">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\3.jpg" alt="Our Store">
+            <h3>Our Store</h3>
+            <p>Where we Manufacture!</p>
+            <a href="#">📍Find Store</a>
+        </div>
+    </div>
+    <div class="slow">
+        <h2>Popular Categories</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit voluptas.</p>
+    </div><br><br>
+    <div class="full">
+    <div class="container">
+        <div class="travel">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\1_4.jpg" alt="Travel">
+            <span>Travel</span>
+        </div>
+        <div class="college">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\3_3.jpg" alt="College">
+            <span>College</span>
+        </div>
+        <div class="leather">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\5_2.jpg" alt="Leather">
+            <span>Leather</span>
+        </div>
+        <div class="reise">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\6_2.jpg" alt="Reise">
+            <span>Reise</span>
+        </div>
+        <div class="handmade">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\8.jpg" alt="Handmade">
+            <span>Handmade</span>
+        </div>
+        <div class="brown">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\7.jpg" alt="Brown">
+            <span>Brown</span>
+        </div>
+        <div class="accessories">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\9.jpg" alt="Accessories">
+            <span>Accessories</span>
+        </div>
+    </div>
+    </div><br><br><br><br>
+    <div class="whole">
+        <div class="divya">
+            <h2 class="sakshi">Best Selling Products</h2>
+            <div class="mano">
+                <div class="harsha">
+                    <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\1-1.jpg" alt="Leather Bag">
+                    <div class="rindhu">
+                        <h4>Leather Bag</h4>
+                        <p>Grey Messenger Bag</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="price">€29.99</p>
+                    </div>
+                </div>
+                <div class="harsha">
+                    <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\4-1.jpg" alt="Black Backpack">
+                    <div class="rindhu">
+                        <h4>Black Backpack</h4>
+                        <p>College Backpack</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="price">€23.49</p>
+                    </div>
+                </div>
+                <div class="harsha">
+                    <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\2-1.jpg" alt="Women Office Bag">
+                    <div class="rindhu">
+                        <h4>Women Office Bag</h4>
+                        <p>Hand Bag</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="price">€11.99</p>
+                    </div>
+                </div>
+                <div class="harsha">
+                    <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\3-2.jpg" alt="Men Black Bag">
+                    <div class="sales">SALE!</div>
+                    <div class="rindhu">
+                        <h4>Men Black Bag</h4>
+                        <p>Laptop Bag</p>
+                        <p class="price">
+                            <p>⭐⭐⭐⭐⭐</p>
+                            <del>€45.99</del>
+                            €39.00
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div> 
+       <div class="unique">
+        <div class="thara">   
+       <div class="pavi">
+           <div class="ananthi">
+               <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\1_1.jpg" alt="Lady Shoulder Bag">
+           </div>
+           <div class="visa">
+               <br><br><br><br><br><br><h2 class="lady">Lady Shoulder Bag.</h2>
+               <p class="sku">SKU: 8465415. Design: Leather / Blue</p>
+               <p class="description">
+                   Proactively empower highly efficient growth strategies. Completely enhance inexpensive best practices before front-end content. Completely procrastinate innovative vortals through maintainable leadership skills. Continually foster business sources for viral leadership skills.
+               </p>
+               <p class="colors">Available Colors:</p>
+               <div class="kowsi">
+                   <span class="color red" data-image="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\2_1.jpg"></span>
+                   <span class="color brown" data-image="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\3 (1).jpg"></span>
+                   <span class="color green" data-image="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\6_1.jpg"></span>
+                   <span class="color blue" data-image="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\1_1.jpg"></span>
+                   <span class="color black" data-image="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\4.jpg"></span>
+               </div>
+               <button class="sathya">View Details</button>
+           </div>
+       </div>
+       </div>
+       </div>
+       <script>
+           document.querySelectorAll('.color').forEach(color => {
+       color.addEventListener('mouseover', function() {
+           document.getElementById('main-image').src = this.getAttribute('data-image');
+       });
+   });
+   
+       </script>
+<div class="key">
+    <div class="lock">
+<div class="floor">
+    <div class="outside">
+        <img src="C:\Users\GOKUL\Downloads\men.jpg" alt="Travel Bags for Men">
+        <div class="inside">
+            <h2>Travel Bags for Men</h2>
+            <pre>                Designed to help you never make your bed again.
+            Superior materials for comfort and lasting quality in a 
+            complete bedding package.</pre>
+            <a href="#" class="father">Go to Shop →</a>
+        </div>
+    </div>
+    <div class="outside">
+        <img src="C:\Users\GOKUL\Downloads\women.jpg" alt="Luxury Bags for Women">
+        <div class="inside">
+            <h2>Luxury Bags for Women</h2>
+       <pre>            Globally monetize unique metrics and enterprise 
+        markets. Efficiently implement cooperative e-services and 
+        integrated interfaces.</pre>
+            <a href="#" class="father">Go to Shop →</a>
+        </div>
+    </div>
+</div>
+<div class="mother">
+    <h2>Shop By Categories</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit voluptas.</p>
+    <div class="eraser">
+        <div class="scale">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\2.png" alt="Laptop">
+            <p>0mm - 31mm</p>
+            <p>Laptop</p>
+        </div>
+        <div class="scale">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\3.png" alt="Hand Bag">
+            <p>0mm - 31mm</p>
+            <p>Hand Bag</p>
+        </div>
+        <div class="scale">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\4.png" alt="Backpack">
+            <p>0mm - 31mm</p>
+            <p>Backpack</p>
+        </div>
+        <div class="scale">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\5.png" alt="Duffle">
+            <p>0mm - 31mm</p>
+            <p>Duffle</p>
+        </div>
+        <div class="scale">
+            <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\6.png" alt="Trolley">
+            <p>0mm - 31mm</p>
+            <p>Trolley</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="black">
+    <footer>
+        <div class="caught">
+            Free Shipping on Orders of <span>$199</span> or above.
+            <div class="drinks">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\5_visa.jpg" alt="Visa">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\7_mc.jpg" alt="MasterCard">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\2_ae.jpg" alt="American Express">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\6_pp.jpg" alt="PayPal">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\3_sk.jpg" alt="Skrill">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\4_2co.jpg" alt="2CO">
+                <img src="C:\Users\GOKUL\OneDrive\Desktop\Ecommerce\1_wu.jpg" alt="Western Union">
+            </div>
+        </div>
+        <div class="juice">
+            <div class="spicy">
+                <h3>HIRE</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Plugins</a></li>
+                </ul>
+            </div>
+            <div class="stove">
+                <h3>COMMUNITY</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Support Forums</a></li>
+                </ul>
+            </div>
+            <div class="watch">
+                <h3>CONNECT SOCIALLY</h3>
+                <div class="sky">
+                    <a href="#"><img src="C:\Users\GOKUL\Downloads\facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="C:\Users\GOKUL\Downloads\twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="C:\Users\GOKUL\Downloads\instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="C:\Users\GOKUL\Downloads\pinterest.png" alt="Pinterest"></a>
+                    <a href="#"><img src="C:\Users\GOKUL\Downloads\vimeo.png" alt="Vimeo"></a>
+                </div>
+                <p>Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
+                <form>
+                    <input type="email" placeholder="Enter your Email">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="land">
+            <a href="mailto:info@canvas.com">📧info@canvas.com</a> | <a href="tel:+111-6541-6369">📞+1-11-6541-6369</a> | <a href="#">CanvasOnSkype</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

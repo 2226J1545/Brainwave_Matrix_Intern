@@ -1,0 +1,668 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav .icons a {
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.ahalya {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.ahalya .amaze{
+    max-width: 50%;
+}
+
+.ahalya .amaze h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.ahalya .amaze p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+.slides {
+    display: none;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+.text {
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    background-color: #717171;
+}
+@media screen and (max-width: 600px) {
+    .text { font-size: 11px }
+}
+.move {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+.walk {
+    width: 30%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+.walk img {
+    width: 250px;
+    height: 300px;
+}
+.walk h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.walk p {
+    color: #777;
+    font-size: 14px;
+}
+.walk a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.slow {
+    text-align: center;
+    padding: 50px 0;
+}
+.slow h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.slow p {
+    color: #777;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container div {
+    position: relative;
+    overflow: hidden;
+}
+.container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.container div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+.container div:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+.container div span {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.travel {
+    grid-column: span 2;
+    height: 250px;
+    width: 600px;
+}
+.college {
+    grid-column: span 1;
+    height: 250px;
+    width: 600px;
+}
+.leather {
+    grid-column: span 1;
+    height: 293px;
+}
+.reise {
+    grid-column: span 1;
+    height: 293px;
+}
+.handmade {
+    grid-column: span 1;
+    height: 293px;
+    width:600px;
+}
+.brown {
+    grid-column: span 2;
+    height: 300px;
+    width:600px;
+}
+.accessories {
+    grid-column: span 1;
+    height: 300px;
+    width:600px;
+}
+.full {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.products-container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    flex: 0 0 calc(25% - 20px); /* Adjust based on the number of items per row */
+    max-width: calc(25% - 20px); /* Adjust based on the number of items per row */
+    box-sizing: border-box;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: lightslategrey;
+}
+
+.whole {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.sakshi{
+    text-align: center;
+}
+.divya {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.mano {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.harsha {
+    background-color: #fff;
+    /*border: 1px solid #e0e0e0;*/
+    border-radius: 8px;
+    overflow: hidden;
+    width: 22%;
+    position: relative;
+}
+.harsha img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.rindhu {
+    padding: 15px;
+    text-align: center;
+}
+.rindhu h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+.rindhu p {
+    margin: 5px 0;
+    color: #666;
+}
+.rindhu .price {
+    color: lightslategray;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.sales {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e60000;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.unique{
+    margin: 0;
+    padding: 0;
+}
+
+.thara {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pavi {
+    background-color: #fff;
+    width: 900px;
+    height:500px;
+    display: flex;
+   /* border: 1px solid #ddd;*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
+
+.lady{
+    color: lightslategray;
+}
+.ananthi {
+    flex: 1;
+    padding: 20px;
+}
+
+.ananthi img {
+    width: 400px;
+    height: 500px;
+}
+
+.visa {
+    flex: 1;
+    padding: 20px;
+}
+
+.visa h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.visa .sku {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.visa .description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.visa .colors {
+    margin-bottom: 10px;
+}
+
+.kowsi {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.color.red { 
+    background-color: #c0392b;
+    height:13px;
+    width:13px; 
+}
+.color.brown {
+     background-color: #8e44ad; 
+     height:13px;
+     width:13px;
+    }
+.color.green {
+     background-color: #27ae60;
+     height:13px;
+     width:13px; 
+    }
+.color.blue { 
+    background-color: #2980b9;
+    height:13px;
+    width:13px; 
+}
+.color.black {
+     background-color: #2c3e50; 
+     height:13px;
+     width:13px;
+    }
+
+.sathya {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sathya:hover {
+    background-color: #1c5987;
+}
+
+.key{
+    margin: 0;
+    padding: 0;
+}
+
+.lock {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.floor {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.outside {
+    position: relative;
+    width: 49%;
+}
+
+.outside img {
+    width: cover;
+    height: 700px;
+    display: block;
+}
+
+.inside {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    color: black;
+}
+
+.inside h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.inside pre {
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+.father {
+    color: black;
+    margin-left: 210px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.mother {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.mother h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mother p {
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.eraser {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.scale {
+    text-align: center;
+    gap: 40px;
+    line-height: 1px;
+}
+
+.scale img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.scale p {
+    font-size: 1em;
+    color: #333;
+}
+.black {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #f9f9f9;
+}
+
+.caught {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+.caught span {
+    font-weight: bold;
+}
+
+.drinks img {
+    width: 40px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.juice {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+.section ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.watch .sky {
+    margin: 10px 0;
+}
+
+.watch .sky a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.watch .sky img {
+    width: 30px;
+}
+
+.watch form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.watch form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.watch form button {
+    padding: 8px 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.land {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.land a {
+    color: #2c3e50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.land a:hover {
+    text-decoration: underline;
+}
